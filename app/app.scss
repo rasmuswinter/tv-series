@@ -1,0 +1,83 @@
+@import "variables";
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+@import "bootstrap/glyphicons";
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+//components
+@import "bootstrap/input-groups";
+@import "bootstrap/list-group";
+@import "bootstrap/navs";
+
+.nav-pills {
+  a {
+    cursor: pointer;
+  }
+
+  .label {
+    position: relative;
+    display: block;
+    padding: $nav-link-padding;
+  }
+
+  margin-bottom: 30px;
+}
+
+.show {
+
+  .show-sidebar {
+
+    text-align: center;
+
+    .summary {
+      margin: 10px 0;
+    }
+    img {
+      margin: 10px 0;
+      max-width: 100%;
+      padding: 5px;
+      border: 1px solid $panel-default-border;
+      background: #ddd;
+      border-radius: $border-radius-large;
+    }
+  }
+
+  .episode-list {
+    .episode {
+      padding: 20px 0 10px 0;
+
+      h4 {
+        margin-top: 0;
+      }
+
+      .episode-number {
+        text-align: right;
+      }
+
+      .episode-airdate {
+        text-align: right;
+      }
+
+      &:first-child {
+        border-top: 1px solid #999;
+      }
+      border-bottom: 1px solid #999;
+    }
+  }
+}
+
+.previous-shows {
+  margin-top: 40px;
+}
+
+

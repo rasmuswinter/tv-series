@@ -1,0 +1,29 @@
+{
+  "name": "tv-series",
+  "version": "0.0.1",
+  "description": "NOW: Pensions Employer and Employee Pensions Portal",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-local-storage": "^0.2.2",
+    "angular-route": "^1.4.8",
+    "angular-ui-router": "^0.2.13",
+    "bootstrap-sass": "^3.3.6",
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.5.2",
+    "gulp-filter": "^3.0.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^0.9.0",
+    "gulp-readmin": "^0.1.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.2.8",
+    "lodash": "^3.10.1",
+    "moment": "^2.9.0",
+    "node-sass": "^3.4.2",
+    "run-sequence": "^1.1.4"
+  },
+  "scripts": {
+    "postinstall": "touch node_modules"
+  }
+}

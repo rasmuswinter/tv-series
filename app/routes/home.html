@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-4">
+        <form class="form">
+            <label for="series-search">Search</label>
+
+            <input id="series-search" type="text" ng-model="inputText" class="form-control" ng-change="searchByName(inputText)" autofocus />
+        </form>
+
+        <div ng-if="oldShows.length > 0" class="previous-shows">
+            <h4>Previous searches</h4>
+            <div class="list-group">
+                <a ng-repeat="show in oldShows" class="list-group-item" ui-sref="show({id: show.id})">
+                    {{show.name}}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <h2>Results</h2>
+        <p ng-if="!searchText && !loading">Use the search on the left to find series by name</p>
+        <div ng-if="loading">Loading...</div>
+        <div ng-if="searchText && !loading">
+            <div ng-if="shows.length == 0">No shows found</div>
+            <div ng-repeat="show in shows">
+                <h4><a ui-sref="show({id: show.show.id})">{{show.show.name}}</a></h4>
+                <div class="score">{{show.score}}</div>
+                <p ng-bind-html="show.show.summary"></p>
+            </div>
+        </div>
+    </div>
+</div>

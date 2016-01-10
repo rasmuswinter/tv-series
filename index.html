@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TvSeries">
+<head>
+    <title>TV Series</title>
+    <base href="/">
+    <link rel="stylesheet" href="/public/app-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1><a ui-sref="search">TV Series Search</a></h1>
+    </div>
+
+    <div ui-view></div>
+</div>
+
+<script src="/node_modules/lodash/index.js"></script>
+<script src="/node_modules/moment/moment.js"></script>
+<script src="/node_modules/angular/angular.js"></script>
+<script src="/node_modules/angular-route/angular-route.js"></script>
+<script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="/public/app-scripts.js"></script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js"></' + 'script>')</script>
+
+</body>
+</html>
