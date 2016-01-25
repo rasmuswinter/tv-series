@@ -1,4 +1,7 @@
-<div class="row show">
+<div ng-if="!showFound">
+    Show not found!
+</div>
+<div ng-if="showFound" class="row show">
     <div class="col-md-3 show-sidebar">
         <div class="row">
             <div class="col-sm-6 col-md-12">
@@ -23,21 +26,7 @@
                     ng-click="changeSeason(season)">{{season.number}}</a></li>
         </ul>
         <div class="episode-list">
-            <div ng-repeat="episode in currentSeason.episodes" class="episode">
-                <div class="row">
-                    <div class="col-sm-1">
-                        <h4 class="episode-number">{{episode.season}}x{{episode.number | fixedLength:2}}</h4>
-                    </div>
-                    <div class="col-sm-9">
-                        <h4 class="episode-name"><a href="{{episode._links.self.href.replace('api.', 'www.')}}" target="_blank">{{episode.name}}</a></h4>
-
-                        <div ng-bind-html="episode.summary"></div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="episode-airdate">{{episode.airdate | airdate}}</div>
-                    </div>
-                </div>
-            </div>
+            <episode-summary ng-repeat="episode in currentSeason.episodes" episode="episode"></episode-summary>
         </div>
     </div>
 </div>

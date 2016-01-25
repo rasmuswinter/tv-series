@@ -1,0 +1,15 @@
+<div class="episode">
+    <div class="row">
+        <div class="col-sm-1">
+            <h4 class="episode-number">{{episode.season}}x{{episode.number | fixedLength:2}}</h4>
+        </div>
+        <div class="col-sm-9">
+            <h4 class="episode-name"><a href="{{episode._links.self.href.replace('api.', 'www.')}}" target="_blank">{{episode.name}}</a></h4>
+
+            <div ng-bind-html="episode.summary"></div>
+        </div>
+        <div class="col-sm-2">
+            <div class="episode-airdate">{{episode.airdate | airdate}}</div>
+        </div>
+    </div>
+</div>

@@ -80,4 +80,8 @@
   margin-top: 40px;
 }
 
-
+form {
+  .ng-invalid {
+    background-color: #f00;
+  }
+}

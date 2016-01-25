@@ -5,6 +5,7 @@ angular.module('TvSeries')
         $scope.loading = true;
         $scope.seasons = [];
         $scope.currentSeason = null;
+        $scope.showFound = true;
 
         var seriesId = $stateParams.id;
 
@@ -40,5 +41,8 @@ angular.module('TvSeries')
                 seasons = _.values(seasons);
                 $scope.seasons = seasons;
                 $scope.changeSeason(seasons[0]);
+            })
+            .then(null, function(err) {
+                $scope.showFound = false;
             });
     });
