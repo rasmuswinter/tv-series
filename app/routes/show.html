@@ -7,7 +7,7 @@
             <div class="col-sm-6 col-md-12">
                 <h2 class="show-name">{{show.name}}</h2>
 
-                <div class="network">{{show.network.name}}</div>
+                <div class="network">{{show.network.name || show.webChannel.name}}</div>
                 <div class="days">{{show.schedule.days.join(', ')}}</div>
                 <div class="time">{{show.schedule.time}}</div>
 
@@ -20,13 +20,27 @@
         <div class="summary" ng-bind-html="show.summary"></div>
     </div>
     <div class="col-md-9">
-        <ul class="nav nav-pills">
-            <li><span class="label">Season</span></li>
-            <li ng-repeat="season in seasons" ng-class="{active: season == currentSeason}"><a
-                    ng-click="changeSeason(season)">{{season.number}}</a></li>
-        </ul>
+        <div class="row">
+            <div class="col-xs-9">
+                <ul class="nav nav-pills">
+                    <li><span class="label">Season</span></li>
+                    <li ng-repeat="season in seasons" ng-class="{active: season == currentSeason}"><a
+                            ng-click="changeSeason(season)">{{season.number}}</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3 text-right">
+                <button ng-click="show.showDetails = true" ng-class="{ btn: true, 'btn-primary': show.showDetails }">
+                    <span class="fa fa-list"></span>
+                </button>
+                <button ng-click="show.showDetails = false" ng-class="{ btn: true, 'btn-primary': !show.showDetails }">
+                    <span class="fa fa-align-justify"></span>
+                </button>
+            </div>
+        </div>
         <div class="episode-list">
-            <episode-summary ng-repeat="episode in currentSeason.episodes" episode="episode"></episode-summary>
+            <episode-summary ng-repeat="episode in currentSeason.episodes"
+                             episode="episode"
+                             show="show"></episode-summary>
         </div>
     </div>
 </div>

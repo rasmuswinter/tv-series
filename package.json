@@ -9,7 +9,9 @@
     "angular-route": "^1.4.8",
     "angular-ui-router": "^0.2.13",
     "bootstrap-sass": "^3.3.6",
+    "clipboard": "^1.5.12",
     "del": "^1.1.1",
+    "font-awesome": "^4.6.3",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "^3.0.1",
@@ -20,6 +22,7 @@
     "gulp-sourcemaps": "^1.2.8",
     "lodash": "^3.10.1",
     "moment": "^2.9.0",
+    "ngclipboard": "^1.1.1",
     "node-sass": "^3.4.2",
     "run-sequence": "^1.1.4"
   },

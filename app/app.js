@@ -4,6 +4,7 @@ angular
     .module('TvSeries', [
         'ngRoute',
         'ui.router',
+        'ngclipboard',
         'LocalStorageModule'
     ])
     .config(function($routeProvider, $stateProvider, $urlRouterProvider) {

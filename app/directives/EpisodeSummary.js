@@ -2,7 +2,8 @@ angular.module('TvSeries')
     .directive('episodeSummary', function() {
         return {
             scope: {
-                episode: '='
+                episode: '=',
+                show: '='
             },
             replace: true,
             templateUrl: 'app/directives/episode-summary.html'

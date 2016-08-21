@@ -58,6 +58,13 @@
 
       h4 {
         margin-top: 0;
+
+        &.episode-name {
+          button {
+            float: right;
+            margin-top: -6px;
+          }
+        }
       }
 
       .episode-number {

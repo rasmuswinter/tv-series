@@ -16,6 +16,7 @@ angular.module('TvSeries')
         DataService.getShow(seriesId)
             .then(function(data) {
                 $scope.show = data;
+                $scope.show.showDetails = false;
                 var oldList = localStorageService.get('show-list');
                 if (!oldList) {
                     oldList = [];

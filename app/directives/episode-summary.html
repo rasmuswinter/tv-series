@@ -4,9 +4,12 @@
             <h4 class="episode-number">{{episode.season}}x{{episode.number | fixedLength:2}}</h4>
         </div>
         <div class="col-sm-9">
-            <h4 class="episode-name"><a href="{{episode._links.self.href.replace('api.', 'www.')}}" target="_blank">{{episode.name}}</a></h4>
+            <h4 class="episode-name">
+                <a href="{{episode._links.self.href.replace('api.', 'www.')}}" target="_blank">{{episode.name}}</a>
+                <button ngclipboard data-clipboard-text="{{episode.season}} {{episode.number | fixedLength:2}} {{episode.name}}" class="btn"><span class="fa fa-clipboard"></span></button>
+            </h4>
 
-            <div ng-bind-html="episode.summary"></div>
+            <div ng-if="show.showDetails" ng-bind-html="episode.summary"></div>
         </div>
         <div class="col-sm-2">
             <div class="episode-airdate">{{episode.airdate | airdate}}</div>
