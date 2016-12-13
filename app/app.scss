@@ -18,8 +18,9 @@
 @import "bootstrap/input-groups";
 @import "bootstrap/list-group";
 @import "bootstrap/navs";
+@import "bootstrap/panels";
 
-.nav-pills {
+.season-links {
   a {
     cursor: pointer;
   }
@@ -39,16 +40,71 @@
 
     text-align: center;
 
+    .rating {
+      border: 1px solid $panel-default-border;
+      border-radius: $panel-border-radius;
+      padding: 5px;
+      margin-top: 10px;
+      background: $body-bg;
+
+      .score {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .stars {
+        font-size: 14px;
+      }
+
+      &.good .stars {
+        color: $brand-success;
+      }
+      &.bad .stars {
+        color: $brand-danger;
+      }
+      &.medium .stars {
+        color: $brand-warning;
+      }
+    }
+
+    .external-links {
+      a .fa {
+        font-size: 50px;
+      }
+    }
+
+    .tab-links {
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      li a {
+        border: 1px solid $nav-pills-active-link-hover-bg;
+
+        .title {
+          display: block;
+        }
+        .icon {
+          display: none;
+        }
+
+        @media(min-width: $screen-md-min),
+        (max-width: $screen-xs-min) {
+          .title {
+            display: none;
+          }
+          .icon {
+            display: block;
+          }
+        }
+      }
+    }
+
     .summary {
       margin: 10px 0;
+      max-height: 300px;
+      overflow-y: auto;
     }
     img {
-      margin: 10px 0;
       max-width: 100%;
-      padding: 5px;
-      border: 1px solid $panel-default-border;
-      background: #ddd;
-      border-radius: $border-radius-large;
     }
   }
 

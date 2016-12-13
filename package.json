@@ -11,7 +11,7 @@
     "bootstrap-sass": "^3.3.6",
     "clipboard": "^1.5.12",
     "del": "^1.1.1",
-    "font-awesome": "^4.6.3",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "^3.0.1",

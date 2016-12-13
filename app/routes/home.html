@@ -22,7 +22,16 @@
         <div ng-if="searchText && !loading">
             <div ng-if="shows.length == 0">No shows found</div>
             <div ng-repeat="show in shows">
-                <h4><a ui-sref="show({id: show.show.id})">{{show.show.name}}</a></h4>
+                <div class="row">
+                    <div class="col-xs-7">
+                        <h4>
+                            <a ui-sref="show({id: show.show.id})">{{show.show.name}}</a>
+                        </h4>
+                    </div>
+                    <div class="col-xs-5 text-right">
+                        <stars rating="show.show.rating.average" ng-if="show.show.rating.average"></stars>
+                    </div>
+                </div>
                 <div class="score">{{show.score}}</div>
                 <p ng-bind-html="show.show.summary"></p>
             </div>
