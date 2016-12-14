@@ -22,15 +22,20 @@
                     <div class="panel-body">
                         <div class="details"
                              ng-if="currentTab.tab == 'details'">
+                            <div class="panel panel-primary rating {{show.rating.level}}"
+                                 ng-if="show.rating.average">
+                                <div class="panel-heading">
+                                    <div class="score">
+                                        {{show.rating.average}} / 10
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <stars rating="show.rating.average"></stars>
+                                </div>
+                            </div>
                             <div class="network">{{show.network.name || show.webChannel.name}}</div>
                             <div class="days">{{show.schedule.days.join(', ')}}</div>
                             <div class="time">{{show.schedule.time}}</div>
-                            <div class="rating {{show.rating.level}}" ng-if="show.rating.average">
-                                <div class="score">
-                                    {{show.rating.average}} / 10
-                                </div>
-                                <stars rating="show.rating.average"></stars>
-                            </div>
                         </div>
                         <img ng-src="{{show.image.medium}}"
                              ng-if="currentTab.tab == 'image'"/>
