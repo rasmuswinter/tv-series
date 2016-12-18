@@ -86,6 +86,7 @@ angular.module('TvSeries')
                 $scope.show.links = getLinks($scope.show.externals);
             })
             .then(null, function(err) {
+                $scope.loading = false;
                 $scope.showFound = false;
             });
     });

@@ -20,6 +20,25 @@
 @import "bootstrap/navs";
 @import "bootstrap/panels";
 
+.page-header {
+  h1 {
+    margin-top: 0;
+  }
+}
+
+#magnet-form {
+  .input-group-addon,
+  .form-control {
+    font-size: 12px;
+  }
+
+  .form-control {
+    height: 30px;
+  }
+  .input-group {
+    margin-bottom: 2px;
+  }
+}
 .season-links {
   a {
     cursor: pointer;

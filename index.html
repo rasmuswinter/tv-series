@@ -6,12 +6,20 @@
     <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/public/app-styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
 </head>
 <body>
 
 <div class="container">
     <div class="page-header">
-        <h1><a ui-sref="search"><span class="fa fa-television"></span> TV Series Search</a></h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1><a ui-sref="search"><span class="fa fa-television"></span> TV Series Search</a></h1>
+            </div>
+            <div class="col-sm-6">
+                <magnet></magnet>
+            </div>
+        </div>
     </div>
 
     <div ui-view></div>

@@ -7,7 +7,7 @@ angular
         'ngclipboard',
         'LocalStorageModule'
     ])
-    .config(function($routeProvider, $stateProvider, $urlRouterProvider) {
+    .config(function($routeProvider, $stateProvider, $urlRouterProvider, $compileProvider) {
         $stateProvider
             .state('search', {
                 url: '/',
@@ -25,6 +25,7 @@ angular
                 controller: 'EpisodeController'
             });
         $urlRouterProvider.otherwise("/");
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|magnet):/);
     })
     .factory('_', function($window) {
         return $window._;

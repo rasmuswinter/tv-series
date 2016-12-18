@@ -1,0 +1,20 @@
+<div class="row" id="magnet-form">
+	<div class="col-xs-9 col-sm-10 inputs">
+		<div class="input-group">
+			<span class="input-group-addon">hash</span>
+			<input type="text" class="form-control text-uppercase" ng-model="magnet.hash" />
+		</div>
+		<div class="input-group">
+			<span class="input-group-addon">description</span>
+			<input type="text" class="form-control" ng-model="magnet.description" />
+		</div>
+	</div>
+	<div class="col-xs-3 col-sm-2 download text-right">
+		<a href="{{magnet.link()}}"
+		   class="btn"
+		   ng-class="{'btn-primary': magnet.valid(), 'btn-danger': magnet.hash && !magnet.valid() }"
+		   ng-disabled="!magnet.valid()">
+			<span class="fa fa-magnet fa-rotate-180 fa-3x"></span>
+		</a>
+	</div>
+</div>
