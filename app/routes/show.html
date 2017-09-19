@@ -14,6 +14,7 @@
                 <ul class="nav nav-pills tab-links">
                     <li role="presentation"
                         ng-repeat="tab in tabs"
+                        ng-show="tab.show()"
                         ng-class="{ active: tab === currentTab }">
                         <a href ng-click="changeTab(tab)">
                             <span class="icon fa fa-{{tab.icon}}"></span>

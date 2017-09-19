@@ -10,22 +10,28 @@ angular.module('TvSeries')
             {
                 title: 'Details',
                 tab: 'details',
-                icon: 'info'
+                icon: 'info',
+                show: function() { return true; }
             },
             {
                 title: 'Summary',
                 tab: 'summary',
-                icon: 'list'
+                icon: 'list',
+                show: function() { return true; }
             },
             {
                 title: 'Image',
                 tab: 'image',
-                icon: 'picture-o'
+                icon: 'picture-o',
+                show: function() { return true; }
             },
             {
                 title: 'Links',
                 tab: 'links',
-                icon: 'link'
+                icon: 'link',
+                show: function() {
+                    return $scope.show.links && $scope.show.links.length > 0;
+                }
             }
         ];
         $scope.currentTab = $scope.tabs[0];
