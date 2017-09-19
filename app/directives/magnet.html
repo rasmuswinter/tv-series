@@ -3,10 +3,20 @@
 		<div class="input-group">
 			<span class="input-group-addon">hash</span>
 			<input type="text" class="form-control text-uppercase" ng-model="magnet.hash" />
+			<span class="input-group-addon clear-input"
+			      ng-click="magnet.hash = ''"
+			      ng-if="magnet.hash">
+				<span class="fa fa-close"></span>
+			</span>
 		</div>
 		<div class="input-group">
 			<span class="input-group-addon">description</span>
 			<input type="text" class="form-control" ng-model="magnet.description" />
+			<span class="input-group-addon clear-input"
+			      ng-click="magnet.description = ''"
+			      ng-if="magnet.description">
+				<span class="fa fa-close"></span>
+			</span>
 		</div>
 	</div>
 	<div class="col-xs-3 col-lg-4 download text-right">

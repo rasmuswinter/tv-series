@@ -38,6 +38,13 @@
   .input-group {
     margin-bottom: 2px;
   }
+
+  .clear-input {
+    cursor: pointer;
+    &:hover {
+      color: $brand-info;
+    }
+  }
 }
 .season-links {
   a {
